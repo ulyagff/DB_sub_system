@@ -1,0 +1,9 @@
+[submodule "client-service"]
+	path = client-service
+	url = https://github.com/semyonan/client-service.git
+[submodule "highload"]
+	path = highload
+	url = https://github.com/ulyagff/highload.git
+[submodule "storage-service"]
+	path = storage-service
+	url = https://github.com/semyonan/storage-service

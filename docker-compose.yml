@@ -1,0 +1,61 @@
+version: '3'
+
+services:
+
+  cli:
+    image: 'client-service:latest'
+    container_name: cli
+    depends_on:
+      - app
+    ports:
+      - 5050:5050
+    stdin_open: true 
+    tty: true
+    networks:
+      - redis-replication
+
+  app:
+    image: 'storage-service:latest'
+    build:
+      context: .
+    container_name: app
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis-m1
+    networks:
+      - redis-replication
+
+  redis-m1:
+    container_name: redis-m1
+    image: redis:latest
+    networks: 
+      - redis-replication
+    restart: always
+    volumes:
+      - ./:/config/redis-0.conf
+
+  redis-m2:
+    container_name: redis-m2
+    image: redis:latest
+    networks: 
+      - redis-replication
+    restart: always
+    volumes:
+      - ./:/config/redis-1.conf
+
+  redis-m3:
+    container_name: redis-m3
+    image: redis:latest
+    networks: 
+      - redis-replication
+    restart: always
+    volumes:
+      - ./:/config/redis-2.conf
+
+networks:
+  redis-replication:
+    ipam: 
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
