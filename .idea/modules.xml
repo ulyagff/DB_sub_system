@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/storage-service/server_component/server_component.iml" filepath="$PROJECT_DIR$/storage-service/server_component/server_component.iml" />
-      <module fileurl="file://$PROJECT_DIR$/storage-service/storageService.iml" filepath="$PROJECT_DIR$/storage-service/storageService.iml" />
-      <module fileurl="file://$PROJECT_DIR$/storage-service/storage_component/storage_component.iml" filepath="$PROJECT_DIR$/storage-service/storage_component/storage_component.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/test-bench-main.iml" filepath="$PROJECT_DIR$/.idea/test-bench-main.iml" />
     </modules>
   </component>

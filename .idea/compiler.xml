@@ -6,14 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="client" />
         <module name="storage_component" />
         <module name="server_component" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="server_component" target="17" />
-      <module name="storage_component" target="17" />
-      <module name="storageService" target="19" />
+      <module name="client-service" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
